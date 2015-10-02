@@ -1,0 +1,68 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/auth0_blue</item>
+        <item name="colorPrimaryDark">@color/auth0_dark_blue</item>
+        <item name="colorAccent">@color/auth0_blue</item>
+    </style>
+
+    <style name="AppTheme.Toolbar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorPrimaryInverse">@color/primary_text_default_material_light</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+    </style>
+
+    <style name="MyLock.Theme" parent="Lock.Theme">
+    </style>
+
+    <style name="Mindjet.Theme" parent="Lock.Theme">
+        <item name="Auth0.Background">@drawable/mindjet_bg</item>
+        <item name="Auth0.PrimaryButtonStyle">@style/Mindjet.Theme.PrimaryButton</item>
+        <item name="Auth0.SecondaryButtonStyle">@style/Mindjet.Theme.SecondaryButton</item>
+        <item name="Auth0.CredentialField.Email">@style/Mindjet.Theme.CredentialField.Email</item>
+        <item name="Auth0.CredentialField.Password">@style/Mindjet.Theme.CredentialField.Password</item>
+        <item name="Auth0.CredentialBox">@style/Mindjet.Theme.CredentialBox</item>
+        <item name="Auth0.Separator.Color">@android:color/white</item>
+        <item name="Auth0.Title.Icon">@style/Mindjet.Theme.Title.Icon</item>
+        <item name="Auth0.Title.Text">@style/Mindjet.Theme.Title.Text</item>
+        <item name="Auth0.Message">@style/Mindjet.Theme.Message</item>
+    </style>
+
+    <style name="Mindjet.Theme.SecondaryButton" parent="Lock.Theme.SecondaryButton">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/btn_mindjet_secondary_background</item>
+    </style>
+
+    <style name="Mindjet.Theme.CredentialField.Email" parent="Lock.Theme.CredentialField.Email">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Mindjet.Theme.CredentialField.Password" parent="Lock.Theme.CredentialField.Password">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@color/field_hint</item>
+    </style>
+
+    <style name="Mindjet.Theme.Title.Icon" parent="Lock.Theme.Title.Icon">
+        <item name="android:src">@drawable/mindjet_icon</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="Mindjet.Theme.Title.Text" parent="Lock.Theme.Title.Text">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Mindjet.Theme.Message" parent="Lock.Theme.Message">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Mindjet.Theme.PrimaryButton" parent="Lock.Theme.PrimaryButton">
+        <item name="android:background">@drawable/btn_mindjet_primary_background</item>
+    </style>
+
+    <style name="Mindjet.Theme.CredentialBox" parent="Lock.Theme.CredentialBox">
+        <item name="android:background">@drawable/box_mindjet_credential_background</item>
+    </style>
+
+</resources>

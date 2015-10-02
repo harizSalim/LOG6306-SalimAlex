@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="com_auth0_auth0_lock">Lock</string>
+    <string name="com_auth0_loading_title"/>
+    <string name="com_auth0_email_placeholder">Email</string>
+    <string name="com_auth0_username_placeholder">Username</string>
+    <string name="com_auth0_password_placeholder">Password</string>
+    <string name="com_auth0_username_email_placeholder">Username/Email</string>
+    <string name="com_auth0_repeat_password_placeholder">Confirm New Password</string>
+    <string name="com_auth0_ok_btn_text">OK</string>
+    <string name="com_auth0_database_login_title">Login</string>
+    <string name="com_auth0_db_login_btn_text">ACCESS</string>
+    <string name="com_auth0_db_signup_button_text">SIGN UP</string>
+    <string name="com_auth0_db_reset_password_button_text">RESET PASSWORD</string>
+    <string name="com_auth0_db_login_error_title">There was an error logging in</string>
+    <string name="com_auth0_db_login_error_message">There was an error processing the sign in.</string>
+    <string name="com_auth0_db_login_invalid_credentials_error_message">Wrong email or password.</string>
+    <string name="com_auth0_db_signup_error_title">There was an error signing up</string>
+    <string name="com_auth0_db_signup_error_message">There was an error processing the sign up.</string>
+    <string name="com_auth0_db_signup_user_already_exists_error_message">The user already exists.</string>
+    <string name="com_auth0_db_cancel_button_text">CANCEL</string>
+    <string name="com_auth0_db_single_sign_on_button">LOGIN WITH %s</string>
+    <string name="com_auth0_enterprise_no_connection_message">There was no connection configured for the domain</string>
+
+    <string name="com_auth0_application_load_failed_title">Failed to load application information</string>
+    <string name="com_auth0_application_load_failed_message">Couldn\'t obtain application configuration. Please check your Auth0 configuration and try again.</string>
+    <string name="com_auth0_application_load_no_connection_message">No Internet connection found. Please check your Internet configuration and try again.</string>
+    <string name="com_auth0_application_retry_button_text">Retry</string>
+    
+    <!-- Validation Errors -->
+    <string name="com_auth0_invalid_credentials_title">Invalid credentials</string>
+    <string name="com_auth0_invalid_credentials_message">The email and password you entered are invalid. Please try again.</string>
+    <string name="com_auth0_invalid_username_credentials_message">The username and password you entered are invalid. Please try again.</string>
+    <string name="com_auth0_invalid_email_message">The email you entered is invalid. Please try again.</string>
+    <string name="com_auth0_invalid_username_message">The username you entered is invalid. Please try again.</string>
+    <string name="com_auth0_invalid_password_message">The password you entered is invalid. Please try again.</string>
+    <string name="com_auth0_db_reset_password_invalid_repeat_password_message">The passwords you entered must match. Please try again.</string>
+
+    <!-- Sign Up -->
+    <string name="com_auth0_database_signup_title">Sign Up</string>
+    <string name="com_auth0_db_signup_title_message">Please enter your email and password</string>
+    <string name="com_auth0_db_signup_btn_text">SIGN UP</string>
+
+    <!-- Change Password -->
+    <string name="com_auth0_database_change_password_title">Reset Password</string>
+    <string name="com_auth0_db_reset_password_title_message">Please enter your email and the new password. We will send you an email to confirm the password change.</string>
+    <string name="com_auth0_db_change_password_btn_text">SEND</string>
+    <string name="com_auth0_db_change_password_error_title">Could\'nt change your password</string>
+    <string name="com_auth0_db_change_password_error_message">There was an error processing the reset password.</string>
+    <string name="com_auth0_db_change_password_title_success">Reset Password</string>
+    <string name="com_auth0_db_change_password_message_success">We\'ve just sent you an email to reset your password.</string>
+
+    <!-- Social Authentication -->
+    <string name="com_auth0_social_only_title">Login</string>
+    <string name="com_auth0_social_db_title">Login</string>
+    <string name="com_auth0_db_enterprise_login_message">Please enter your corporate credentials at %s</string>
+    <string name="com_auth0_social_signup_separator">Or please enter your email and password</string>
+    <string name="com_auth0_social_separator">OR</string>
+    <string name="com_auth0_sso_text">SINGLE SIGN-ON ENABLED</string>
+
+</resources>

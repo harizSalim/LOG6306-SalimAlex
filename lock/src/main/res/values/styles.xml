@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ styles.xml
+  ~
+  ~ Copyright (c) 2014 Auth0 (http://auth0.com)
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in
+  ~ all copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  ~ THE SOFTWARE.
+  -->
+<resources>
+
+    <style name="Lock.Theme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="spbStyle">@style/Lock.Theme.ProgressBarHorizontal</item>
+        <item name="Auth0.PrimaryButtonStyle">@style/Lock.Theme.PrimaryButton</item>
+        <item name="Auth0.SecondaryButtonStyle">@style/Lock.Theme.SecondaryButton</item>
+        <item name="Auth0.CredentialField.Email">@style/Lock.Theme.CredentialField.Email</item>
+        <item name="Auth0.CredentialField.Password">@style/Lock.Theme.CredentialField.Password</item>
+        <item name="Auth0.CredentialField.Username">@style/Lock.Theme.CredentialField.Username</item>
+        <item name="Auth0.CredentialBox">@style/Lock.Theme.CredentialBox</item>
+        <item name="Auth0.Message">@style/Lock.Theme.Message</item>
+        <item name="Auth0.Background">@color/com_auth0_lock_background</item>
+        <item name="Auth0.Title.Icon">@style/Lock.Theme.Title.Icon</item>
+        <item name="Auth0.Title.Text">@style/Lock.Theme.Title.Text</item>
+        <item name="Auth0.Separator.Color">@color/com_auth0_credential_box_border</item>
+        <item name="Auth0.CredentialField">@style/Lock.Theme.CredentialField</item>
+        <item name="Auth0.GridView.Small">@style/Lock.Theme.Social.GridView</item>
+    </style>
+
+    <style name="Lock.Theme.SecondaryButton" parent="Widget.AppCompat.ActionButton">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/com_auth0_secondary_button_text</item>
+        <item name="android:layout_height">@dimen/com_auth0_secondary_button_height</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/com_auth0_secondary_button_text_size</item>
+        <item name="android:background">@drawable/com_auth0_btn_secondary_background</item>
+        <item name="android:layout_marginBottom">@dimen/com_auth0_secondary_button_margin_bottom</item>
+    </style>
+
+    <style name="Lock.Theme.PrimaryButton" parent="Widget.AppCompat.ActionButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/com_auth0_primary_button_height</item>
+        <item name="android:textColor">@color/com_auth0_primary_button_text</item>
+        <item name="android:background">@drawable/com_auth0_btn_primary_background</item>
+        <item name="android:textSize">@dimen/com_auth0_primary_button_text_size</item>
+    </style>
+
+    <style name="Lock.Theme.CredentialField.Email" parent="Lock.Theme.CredentialField">
+        <item name="com_auth0_normalIconDrawable">@drawable/com_auth0_ic_email</item>
+        <item name="com_auth0_errorIconDrawable">@drawable/com_auth0_ic_email_error</item>
+    </style>
+
+    <style name="Lock.Theme.CredentialField.Username" parent="Lock.Theme.CredentialField">
+        <item name="com_auth0_normalIconDrawable">@drawable/com_auth0_ic_person</item>
+        <item name="com_auth0_errorIconDrawable">@drawable/com_auth0_ic_person_error</item>
+    </style>
+
+    <style name="Lock.Theme.CredentialField.Password" parent="Lock.Theme.CredentialField">
+        <item name="com_auth0_normalIconDrawable">@drawable/com_auth0_ic_lock</item>
+        <item name="com_auth0_errorIconDrawable">@drawable/com_auth0_ic_lock_error</item>
+    </style>
+
+    <style name="Lock.Theme.CredentialField" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/com_auth0_credential_field_height</item>
+        <item name="android:textSize">@dimen/com_auth0_credential_field_font_size</item>
+        <item name="android:textColorHint">@color/com_auth0_credential_field_hint</item>
+        <item name="android:paddingLeft">@dimen/com_auth0_credential_field_padding</item>
+        <item name="android:paddingRight">@dimen/com_auth0_credential_field_padding</item>
+        <item name="android:paddingBottom">@dimen/com_auth0_credential_field_vertical_padding</item>
+        <item name="android:paddingTop">@dimen/com_auth0_credential_field_vertical_padding</item>
+        <item name="android:drawablePadding">@dimen/com_auth0_credential_field_icon_right_padding</item>
+        <item name="android:background">@color/com_auth0_credential_field_background</item>
+        <item name="android:textCursorDrawable">@drawable/com_auth0_cursor</item>
+    </style>
+
+    <style name="Lock.Theme.ProgressBarHorizontal">
+        <item name="spb_color">@color/com_auth0_lock_blue_light</item>
+    </style>
+
+    <style name="Lock.Theme.CredentialBox">
+        <item name="android:background">@drawable/com_auth0_box_credential_background</item>
+    </style>
+
+    <style name="Lock.Theme.Message" parent="TextAppearance.AppCompat.Small">
+        <item name="android:layout_marginBottom">@dimen/com_auth0_lock_vertical_margin</item>
+    </style>
+
+    <style name="Lock.Theme.Title"/>
+
+    <style name="Lock.Theme.Social"/>
+
+    <style name="Lock.Theme.Social.GridView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/com_auth0_social_grid_view_height</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:stretchMode">columnWidth</item>
+        <item name="android:verticalSpacing">@dimen/com_auth0_social_grid_view_item_spacing_vertical</item>
+    </style>
+
+    <style name="Lock.Theme.Title.Icon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/com_auth0_title_lock_margin_top</item>
+        <item name="android:src">@drawable/com_auth0_ic_people</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:background">@drawable/com_auth0_icon_background</item>
+        <item name="android:cropToPadding">false</item>
+        <item name="android:paddingLeft">@dimen/com_auth0_title_lock_image_horizontal_padding</item>
+        <item name="android:paddingRight">@dimen/com_auth0_title_lock_image_horizontal_padding</item>
+        <item name="android:paddingBottom">@dimen/com_auth0_title_lock_image_vertical_padding</item>
+        <item name="android:paddingTop">@dimen/com_auth0_title_lock_image_vertical_padding</item>
+    </style>
+
+    <style name="Lock.Theme.Title.Text" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/com_auth0_title_lock_text_size</item>
+        <item name="android:layout_marginTop">@dimen/com_auth0_title_lock_text_margin_top</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>

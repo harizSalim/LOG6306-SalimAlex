@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="com_auth0_lock_blue">#16214d</color>
+    <color name="com_auth0_lock_blue_light">#44c7f4</color>
+    <color name="com_auth0_lock_red">#eb5424</color>
+    <color name="com_auth0_lock_grey">#d0d2d3</color>
+
+    <color name="com_auth0_lock_background">#ffffffff</color>
+
+    <color name="com_auth0_credential_box_background">@android:color/transparent</color>
+    <color name="com_auth0_credential_box_border">#ccc</color>
+    <color name="com_auth0_credential_field_error">#c00</color>
+    <color name="com_auth0_credential_field_hint">#ccc</color>
+    <color name="com_auth0_credential_field_background">@android:color/transparent</color>
+    <color name="com_auth0_credential_field_cursor">#ffb3b5b6</color>
+
+    <color name="com_auth0_primary_button_text">@android:color/white</color>
+    <color name="com_auth0_primary_button_normal_background">#15204D</color>
+    <color name="com_auth0_primary_button_highlighted_background">#0A1024</color>
+    <color name="com_auth0_primary_button_disabled_background">#153a4d</color>
+
+    <color name="com_auth0_secondary_button_text">#4d4d4d</color>
+    <color name="com_auth0_secondary_button_border">#f0f0f0</color>
+    <color name="com_auth0_secondary_button_normal_background">@android:color/transparent</color>
+    <color name="com_auth0_secondary_button_disabled_background">@android:color/transparent</color>
+
+    <color name="com_auth0_title_lock_icon_background">#f0f0f0</color>
+
+    <!--Social-->
+    <color name="com_auth0_social_button_icon_background">#46000000</color>
+</resources>

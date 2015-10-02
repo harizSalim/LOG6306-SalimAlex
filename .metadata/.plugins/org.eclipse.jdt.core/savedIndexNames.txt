@@ -1,0 +1,1 @@
+INDEX VERSION 1.127+C:\Users\Seb\Documents\Polytechnique\LOG6306\Project\Git\LOG6306-SalimAlex\.metadata\.plugins\org.eclipse.jdt.core

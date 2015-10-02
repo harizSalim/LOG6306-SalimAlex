@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion compile.maxSdk
+    buildToolsVersion compile.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion compile.minSdk
+        targetSdkVersion compile.maxSdk
+        applicationId "com.auth0.app.Lock"
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    if (project.hasProperty("lockKeystorePass")) {
+        signingConfigs {
+            release {
+                storeFile file('keystore/release.keystore')
+                keyAlias 'LockReleaseKey'
+                storePassword project.getProperty('lockKeystorePass')
+                keyPassword project.getProperty('lockKeyPass')
+            }
+        }
+    }
+
+    buildTypes {
+
+        release {
+            minifyEnabled true
+            proguardFile '../proguard/proguard-facebook.pro' //facebook native auth
+            proguardFile '../proguard/proguard-google-play-services.pro' //G+ native auth
+            proguardFile '../proguard/proguard-android-async-http.pro' //Auth0 core
+            proguardFile '../proguard/proguard-jackson-2.pro' //Auth0 core
+            proguardFile '../proguard/proguard-square-otto.pro' //Lock
+            proguardFile '../proguard/proguard-lock.pro' //Lock
+            proguardFile 'proguard-project.pro'
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+            signingConfig signingConfigs.hasProperty('release') ? signingConfigs.release : null
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':lock')
+    compile project(':lock-sms')
+    compile project(':lock-email')
+    compile(project(':integrations:facebook')) {
+        exclude module: 'core'
+        exclude module: 'identity-core'
+    }
+    compile(project(':integrations:googleplus')) {
+        exclude module: 'core'
+        exclude module: 'identity-core'
+    }
+    compile libraries.app_compat
+}
