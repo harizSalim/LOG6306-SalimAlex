@@ -100,19 +100,18 @@ public class LockActivity extends FragmentActivity {
         broadcastManager = LocalBroadcastManager.getInstance(this);
         callback = new LockIdentityProviderCallback(lock.getBus());
         ActivityUIHelper.configureScreenModeForActivity(this, lock);
+        lock.getBus().register(this);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        lock.getBus().register(this);
         lock.resetAllProviders();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        this.lock.getBus().unregister(this);
         lock.resetAllProviders();
     }
 
@@ -153,6 +152,7 @@ public class LockActivity extends FragmentActivity {
     protected void onDestroy() {
         identity = null;
         dismissProgressDialog();
+        this.lock.getBus().unregister(this);
         super.onDestroy();
     }
 
@@ -285,33 +285,38 @@ public class LockActivity extends FragmentActivity {
     @SuppressWarnings("unused")
     @Subscribe public void onSocialAuthentication(IdentityProviderAuthenticationEvent event) {
         final Token token = event.getToken();
-        lock.getAPIClient().fetchUserProfile(token.getIdToken(), new BaseCallback<UserProfile>() {
-            @Override
-            public void onSuccess(UserProfile userProfile) {
-                lock.getBus().post(new AuthenticationEvent(userProfile, token));
-            }
+        lock.getAuthenticationAPIClient()
+                .tokenInfo(token.getIdToken())
+                .start(new BaseCallback<UserProfile>() {
+                    @Override
+                    public void onSuccess(UserProfile userProfile) {
+                        lock.getBus().post(new AuthenticationEvent(userProfile, token));
+                    }
 
-            @Override
-            public void onFailure(Throwable error) {
-                lock.getBus().post(new LoginAuthenticationErrorBuilder().buildFrom(error));
-            }
-        });
+                    @Override
+                    public void onFailure(Throwable error) {
+                        lock.getBus().post(new LoginAuthenticationErrorBuilder().buildFrom(error));
+                    }
+                });
     }
 
     @SuppressWarnings("unused")
     @Subscribe public void onSocialCredentialEvent(SocialCredentialEvent event) {
         Log.v(TAG, "Received social accessToken " + event.getAccessToken());
-        lock.getAPIClient().socialLogin(event.getService(), event.getAccessToken(), lock.getAuthenticationParameters(), new AuthenticationCallback() {
-            @Override
-            public void onSuccess(UserProfile profile, Token token) {
-                lock.getBus().post(new AuthenticationEvent(profile, token));
-            }
+        lock.getAuthenticationAPIClient()
+                .loginWithOAuthAccessToken(event.getAccessToken(), event.getService())
+                .addParameters(lock.getAuthenticationParameters())
+                .start(new AuthenticationCallback() {
+                    @Override
+                    public void onSuccess(UserProfile profile, Token token) {
+                        lock.getBus().post(new AuthenticationEvent(profile, token));
+                    }
 
-            @Override
-            public void onFailure(Throwable error) {
-                lock.getBus().post(new LoginAuthenticationErrorBuilder().buildFrom(error));
-            }
-        });
+                    @Override
+                    public void onFailure(Throwable error) {
+                        lock.getBus().post(new LoginAuthenticationErrorBuilder().buildFrom(error));
+                    }
+                });
     }
 
     private LockFragmentBuilder newFragmentBuilder(Lock lock) {

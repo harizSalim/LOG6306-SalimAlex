@@ -51,5 +51,13 @@ dependencies {
     compile project(':lock')
     compile project(':lock-sms')
     compile project(':lock-email')
+    compile(project(':integrations:facebook')) {
+        exclude module: 'core'
+        exclude module: 'identity-core'
+    }
+    compile(project(':integrations:googleplus')) {
+        exclude module: 'core'
+        exclude module: 'identity-core'
+    }
     compile libraries.app_compat
 }
