@@ -51,7 +51,7 @@ public class SignUpValidator implements Validator {
         this(
                 emailValidator(useEmail, requiresUsername),
                 usernameValidator(useEmail, requiresUsername),
-                new PasswordValidator(R.id.com_auth0_db_signup_password_field, R.string.com_auth0_invalid_credentials_title, R.string.com_auth0_invalid_password_message),
+                new PasswordSignupValidator(R.id.com_auth0_db_signup_password_field, R.string.com_auth0_invalid_credentials_title, R.string.com_auth0_invalid_password_message),
                 useEmail ? R.string.com_auth0_invalid_credentials_message : R.string.com_auth0_invalid_username_credentials_message
         );
     }
