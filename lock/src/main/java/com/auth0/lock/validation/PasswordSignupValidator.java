@@ -2,7 +2,7 @@ package com.auth0.lock.validation;
 
 public class PasswordSignupValidator extends BaseFragmentValidator {
 
-	public PasswordValidator(int fieldResource, int errorTitleResource, int errorMessageResource) {
+	public PasswordSignupValidator(int fieldResource, int errorTitleResource, int errorMessageResource) {
         super(fieldResource, errorTitleResource, errorMessageResource);
     }
 	
