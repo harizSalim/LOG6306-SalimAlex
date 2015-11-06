@@ -105,7 +105,10 @@ public class SignUpFormFragment extends Fragment {
             Log.d(TAG, "Specified DB connection with name " + connection.getName());
             requiresUsername = connection.booleanForKey("requires_username");
         }
-        validator = new SignUpValidator(useEmail, requiresUsername);
+
+        String passwordPolicy = connection.getValueForKey("passwordPolicy");
+
+        validator = new SignUpValidator(useEmail, requiresUsername, passwordPolicy);
     }
 
     @Override

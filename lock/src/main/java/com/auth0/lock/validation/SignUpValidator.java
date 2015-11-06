@@ -26,6 +26,7 @@ package com.auth0.lock.validation;
 
 import android.support.v4.app.Fragment;
 
+import com.auth0.core.Strategies;
 import com.auth0.lock.R;
 import com.auth0.lock.event.AuthenticationError;
 
@@ -47,11 +48,11 @@ public class SignUpValidator implements Validator {
         this.compositeErrorMessage = compositeErrorMessage;
     }
 
-    public SignUpValidator(boolean useEmail, boolean requiresUsername) {
+    public SignUpValidator(boolean useEmail, boolean requiresUsername, String passwordPolicy) {
         this(
                 emailValidator(useEmail, requiresUsername),
                 usernameValidator(useEmail, requiresUsername),
-                new ExcellentPasswordValidator(R.id.com_auth0_db_signup_password_field, R.string.com_auth0_invalid_credentials_title, R.string.com_auth0_invalid_password_message),
+                PasswordValidatorFactory.CreateInstance(passwordPolicy, R.id.com_auth0_db_signup_password_field),
                 useEmail ? R.string.com_auth0_invalid_credentials_message : R.string.com_auth0_invalid_username_credentials_message
         );
     }

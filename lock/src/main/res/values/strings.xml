@@ -35,6 +35,11 @@
     <string name="com_auth0_invalid_email_message">The email you entered is invalid. Please try again.</string>
     <string name="com_auth0_invalid_username_message">The username you entered is invalid. Please try again.</string>
     <string name="com_auth0_invalid_password_message">The password you entered is invalid. Please try again.</string>
+    <string name="com_auth0_invalid_low_password_message">The password you entered is invalid. Must be at least 6 characters in length.</string>
+    <string name="com_auth0_invalid_fair_password_message">The password you entered is invalid. The password must be at least 8 characters in length, it must contain a lower case letter, an upper case letter and a number.</string>
+    <string name="com_auth0_invalid_good_password_message">The password you entered is invalid. The password must be at least 8 characters in length. Contains at least 3 of the following 4 characters: a lower case letter, an upper case letter, a number or an special character.</string>
+    <string name="com_auth0_invalid_excellent_password_message">The password you entered is invalid. The password must be at least 10 characters in length. No more than 2 identical characters in a row (e.g., "aaa" is not allowed). Contains at least 3 of the following 4 types of characters: a lower case letter, an upper case letter, number and special characters.</string>
+
     <string name="com_auth0_db_reset_password_invalid_repeat_password_message">The passwords you entered must match. Please try again.</string>
 
     <!-- Sign Up -->
