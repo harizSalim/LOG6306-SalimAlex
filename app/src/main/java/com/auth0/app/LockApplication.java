@@ -33,6 +33,7 @@ import com.auth0.googleplus.GooglePlusIdentityProvider;
 import com.auth0.lock.Lock;
 import com.auth0.lock.LockBuilder;
 import com.auth0.lock.LockProvider;
+import com.auth0.twitter.TwitterIdentityProvider;
 
 import java.util.Map;
 
@@ -50,6 +51,7 @@ public class LockApplication extends Application implements LockProvider {
                 .fullscreen(false)
                 .withIdentityProvider(Strategies.Facebook, new FacebookIdentityProvider(this))
                 .withIdentityProvider(Strategies.GooglePlus, new GooglePlusIdentityProvider(this))
+                .withIdentityProvider(Strategies.Twitter, new TwitterIdentityProvider(this))
                 .build();
     }
 

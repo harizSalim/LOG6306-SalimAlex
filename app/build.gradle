@@ -59,5 +59,10 @@ dependencies {
         exclude module: 'core'
         exclude module: 'identity-core'
     }
+    compile(project(':integrations:twitter')) {
+        exclude module: 'core'
+        exclude module: 'identity-core'
+    }
+
     compile libraries.app_compat
 }
