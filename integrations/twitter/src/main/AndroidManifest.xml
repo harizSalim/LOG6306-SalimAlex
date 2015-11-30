@@ -2,6 +2,7 @@
 
     <application android:allowBackup="true" android:label="@string/app_name"
         android:supportsRtl="true">
+        <meta-data android:name="io.fabric.ApiKey" android:value="vntUu4tx2RYYvtsiUJ5JqJGmc"/>
 
     </application>
 
